@@ -1,0 +1,148 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EZDiscord",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.ezdiscord",
+					"match": "//.*$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.ezdiscord",
+					"match": "\\b(if|else|while|for)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.ezdiscord",
+					"match": "\\b(and|or|not)\\b"
+				},
+				{
+					"name": "keyword.operator.arithmetic.ezdiscord",
+					"match": "(\\+|\\-|\\*|\\/|\\%)"
+				},
+				{
+					"name": "keyword.operator.comparison.ezdiscord",
+					"match": "(==|!=)"
+				},
+				{
+					"name": "keyword.operator.relational.ezdiscord",
+					"match": "(<|>|<=|>=)"
+				},
+				{
+					"name": "keyword.operator.assignment.ezdiscord",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.expression.ezdiscord",
+					"match": "\\b(in)\\b"
+				},
+				{
+					"name": "keyword.operator.type.annotation.ezdiscord",
+					"match": ":"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.single.ezdiscord",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ezdiscord",
+					"match": "\\\\."
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.type.ezdiscord",
+					"match": "\\bvar\\b"
+				},
+				{
+					"name": "storage.type.function.ezdiscord",
+					"match": "\\bcommand\\b"
+				},
+				{
+					"name": "support.type.primitive.ezdiscord",
+					"match": "\\b(string|number|boolean)\\b"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.definition.brackets.ezdiscord",
+					"match": "\\(|\\)\\{|\\}|\\[|\\]"
+				},
+				{
+					"name": "punctuation.separator.comma.ezdiscord",
+					"match": ","
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.boolean.true.ezdiscord",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "constant.numeric.ezdiscord",
+					"match": "-?\\d+(\\.\\d+)?"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "support.class.ezdiscord",
+					"match": "\\b(Token|ClientID|GuildID)\\b"
+				},
+				{
+					"name": "support.function.ezdiscord",
+					"match": "\\b(random|add|remove|get|set|len|find|reply|concat)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.ezdiscord",
+					"match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.ezd"
+}

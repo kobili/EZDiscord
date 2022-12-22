@@ -1,0 +1,6 @@
+{
+  "title": "Boolean as condition in for loop",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\ncommand test() {\nfor (some_bool) {\n    var thing = 55\n    if (c) {\n        thing = 66\n    } else {\n        thing = get(array, 1)\n    }\n    reply(thing)\n}\n}",
+  "result": ""
+}

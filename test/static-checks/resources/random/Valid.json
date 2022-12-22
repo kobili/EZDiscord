@@ -1,0 +1,6 @@
+{
+  "title": "Valid call to random function",
+  "isValid": true,
+  "inputString": "Token='123'\nClientID = '123'\nGuildID=['123', '123']\n\nvar user = 'Joe'\n\ncommand dWhatever() {\n    var d = random(1,2)\n    reply(d) \n}",
+  "result": ""
+}

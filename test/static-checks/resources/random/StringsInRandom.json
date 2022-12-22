@@ -1,0 +1,6 @@
+{
+  "title": "Invalid parameter type in random",
+  "isValid": false,
+  "inputString": "Token='123'\nClientID = '123'\nGuildID=['123', '123']\n\nvar user = 'Joe'\n\ncommand dWhatever(a: number) {\n    var d = random('1','3')\n    reply(d)\n}",
+  "result": ""
+}

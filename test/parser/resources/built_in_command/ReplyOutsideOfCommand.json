@@ -1,0 +1,6 @@
+{
+  "title": "Reply outside of command",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\n// should not affect anything\nvar a =random(1, 2)\nvar b = add(arr, 1)\nvar c = add(arr, 1)\nvar d = get(arr, 2)\nvar e = set(arr, 1, 3)\nvar f = len(arr)\nvar g = find(arr, 1)\nreply('hello', '!')",
+  "result": ""
+}

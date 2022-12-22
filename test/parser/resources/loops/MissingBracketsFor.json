@@ -1,0 +1,6 @@
+{
+  "title": "Missing brackets for condition in loops (for)",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\ncommand test() {\nfor thing in f {\n    if (b) {\n        var otherThing = thing\n    } else {\n        var newThing = thing\n    }\n\n    while (b) {\n        reply('infinite loop hehe xd')\n    }\n\n    reply(thing)\n}\n}",
+  "result": ""
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Math operations in built-in functions",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\nvar g = find(arr, random(0, len(a)-1))",
+  "result": ""
+}

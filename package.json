@@ -1,0 +1,41 @@
+{
+  "name": "ezdiscord",
+  "license": "GPL-1.0+",
+  "scripts": {
+    "ezd-compile": "rd /S /Q out 2>nul & mkdir out 2>nul & yarn antlr && ts-node src/main/GenerateFiles.ts",
+    "ezd-run": "npx ts-node src/main/RunBot.ts",
+    "ezd-start": "yarn ezd-compile && yarn ezd-run",
+    "antlr": "antlr4ts -visitor src/parser/EZDiscordLexer.g4 src/parser/EZDiscordParser.g4 -o src/parser -Xexact-output-dir",
+    "pretty": "prettier --config ./.prettierrc.json --write \"./**/*.ts\"",
+    "test-parser": "mocha --require ts-node/register 'test/parser/*.ts' --timeout 10000",
+    "test-static": "mocha --require ts-node/register 'test/static-checks/*.ts' --timeout 10000",
+    "integration-valid": "cross-env INPUT=./test/integration/resources/valid.ezd OUTPUT=./test/integration/out/valid.ts yarn ezd-compile",
+    "integration-invalid": "cross-env INPUT=./test/integration/resources/invalid.ezd OUT=./test/integration/out/invalid.ts yarn ezd-compile out 2>nul",
+    "integration-compile": "yarn integration-invalid & yarn integration-valid",
+    "test-integration": "yarn integration-compile && mocha --require ts-node/register 'test/integration/*.ts' --timeout 10000",
+    "test": "yarn test-parser && yarn test-static && yarn test-integration"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^1.3.0",
+    "antlr4ts": "^0.5.0-alpha.4",
+    "chalk": "4.1.2",
+    "discord.js": "^14.5.0",
+    "dotenv": "^16.0.3",
+    "ts-mocha": "^10.0.0",
+    "ts-morph": "^16.0.0"
+  },
+  "devDependencies": {
+    "@testdeck/mocha": "^0.2.1",
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.8.1",
+    "antlr4ts-cli": "^0.5.0-alpha.4",
+    "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.0.0",
+    "prettier": "^2.7.1",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}

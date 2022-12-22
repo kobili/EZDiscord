@@ -1,0 +1,6 @@
+{
+  "title": "Missing condition in if",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\ncommand test() {\n    var thing = 55\n    if {\n        if (b) {\n            reply('what')\n        } else {\n            reply('no')\n        }\n        thing = 66\n    } else {\n        if (b) {\n            reply('no')\n        } else {\n            reply('what')\n        }\n        thing = get(array, 1)\n    }\n    reply(thing)\n}",
+  "result": ""
+}

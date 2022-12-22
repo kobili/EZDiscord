@@ -1,0 +1,6 @@
+{
+  "title": "Valid configs",
+  "isValid": true,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\ncommand test() {\n    reply(thing)\n}",
+  "result": ""
+}

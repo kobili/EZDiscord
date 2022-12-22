@@ -1,0 +1,18 @@
+Token='123'
+ClientID = '123'
+GuildID=['123', '123']
+
+var user = 'Joe'
+
+command integrationTest(a: number) {
+    var d = a%1
+    var c = d != 0
+    if (c) {
+        reply('You Must Input an Integer')
+    } else {
+        var b = random(1,a)
+        var i = ''
+        i = concat('d', a, '=', b)
+        reply(b)
+    }
+}

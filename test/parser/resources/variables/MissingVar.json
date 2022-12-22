@@ -1,0 +1,6 @@
+{
+  "title": "Missing var",
+  "isValid": false,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\n// should not affect anything\na = get(a, get(a))\nvar b = true\nvar c = b\nvar d = 'string'\nvar e = 69\nvar f = ['a quick brown fox', 100, true, var_name, get(array, len(random(0, 10)))]\nvar g = (2+45)/2+123*(1235)-234-(-234/2)+a+b/c-(-e)\nvar h = not (a and b or (false == bool_var))\n",
+  "result": ""
+}

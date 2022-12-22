@@ -1,0 +1,6 @@
+{
+  "title": "Different order of config",
+  "isValid": true,
+  "inputString": "ClientID = '123456789'\nGuildID=['123456789', '4567890']\nToken='123456789'\n\ncommand test() {\n    reply(thing)\n}",
+  "result": ""
+}

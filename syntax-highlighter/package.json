@@ -1,0 +1,46 @@
+{
+  "name": "ezdiscord-syntax-highlighter",
+  "displayName": "EZDiscord Syntax Highlighter",
+  "description": "Syntax highlighting for EZDiscord DSL",
+  "version": "0.0.5",
+  "publisher": "AsadDhorajiwala",
+  "keywords": [
+    "EZDiscord",
+    "ezd",
+    ".ezd",
+    "dsl",
+    "highlight",
+    "coloring"
+  ],
+  "author": {
+    "name": "Asad Dhorajiwala"
+  },
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ezdiscord",
+        "aliases": [
+          "EZDiscord",
+          "ezdiscord"
+        ],
+        "extensions": [
+          ".ezd"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ezdiscord",
+        "scopeName": "source.ezd",
+        "path": "./syntaxes/ezdiscord.tmLanguage.json"
+      }
+    ]
+  }
+}

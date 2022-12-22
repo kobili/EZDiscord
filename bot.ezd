@@ -1,0 +1,29 @@
+Token='123'
+ClientID = '123'
+GuildID=['123', '123']
+
+var sum = 0
+var todoList = []
+
+command addSum(num: number, shouldReply: boolean, probabilityToReply: number) {
+    sum = sum + num
+    var probability = probabilityToReply*100
+    var randomNumber = random(0,100)
+    var willReply = shouldReply and (randomNumber <= probability)
+    if (willReply) {
+        reply('your new sum is: ', sum)
+    } else {
+        reply('looks like we failed the reply check with probability ', probabilityToReply)
+    }
+}
+
+command addToDoList(task: string) {
+    add(todoList, task)
+    var message = ''
+    for (todo in todoList) {
+        var todoIndex = find(todoList, todo)
+        var todoIndexPrime = todoIndex+1 
+        message = concat(message, '[', todoIndexPrime, ']: ', todo, '\n')
+    }
+    reply(message)
+}

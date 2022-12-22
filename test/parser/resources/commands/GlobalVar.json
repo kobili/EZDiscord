@@ -1,0 +1,6 @@
+{
+  "title": "Allow creating global variables outside of commands",
+  "isValid": true,
+  "inputString": "Token='123456789'\nClientID = '123456789'\nGuildID=['123456789', '4567890']\n\nvar global = 'ff'\n\ncommand test(arg1: string, arg2: number, arg3: boolean) {\n    var rep = arg1\n    reply(rep)\n}",
+  "result": ""
+}
